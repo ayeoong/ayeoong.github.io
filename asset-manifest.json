@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/ayeoong/ayeoong.github.io/static/css/main.31d6cfe0.css",
-    "main.js": "/ayeoong/ayeoong.github.io/static/js/main.e93f1c0a.js",
-    "index.html": "/ayeoong/ayeoong.github.io/index.html",
-    "main.e93f1c0a.js.map": "/ayeoong/ayeoong.github.io/static/js/main.e93f1c0a.js.map"
+    "main.css": "/static/css/main.31d6cfe0.css",
+    "main.js": "/static/js/main.d39cf446.js",
+    "index.html": "/index.html",
+    "main.d39cf446.js.map": "/static/js/main.d39cf446.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.e93f1c0a.js"
+    "static/js/main.d39cf446.js"
   ]
 }
