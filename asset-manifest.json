@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/ayeoong/static/css/main.31d6cfe0.css",
-    "main.js": "/ayeoong/static/js/main.d39cf446.js",
+    "main.css": "/ayeoong/static/css/main.dc4d6ff2.css",
+    "main.js": "/ayeoong/static/js/main.c3084eb9.js",
     "index.html": "/ayeoong/index.html",
-    "main.d39cf446.js.map": "/ayeoong/static/js/main.d39cf446.js.map"
+    "main.dc4d6ff2.css.map": "/ayeoong/static/css/main.dc4d6ff2.css.map",
+    "main.c3084eb9.js.map": "/ayeoong/static/js/main.c3084eb9.js.map"
   },
   "entrypoints": [
-    "static/css/main.31d6cfe0.css",
-    "static/js/main.d39cf446.js"
+    "static/css/main.dc4d6ff2.css",
+    "static/js/main.c3084eb9.js"
   ]
 }
