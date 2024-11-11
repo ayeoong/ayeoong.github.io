@@ -1,26 +1,32 @@
-import React, { Fragment, useCallback, useEffect, useState } from "react";
+import React, { Fragment } from "react";
+import { BrowserRouter } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+import { CookiesProvider } from "react-cookie";
+
 import "../style/App.css";
+import Router from "./Router";
 
-const App: React.FC = () => {
-const [message, setMessage] = useState<string>("Hello, I'm Ayeong!");
+// React Query 설정
+const queryClient = new QueryClient();
 
-const changeMessage = useCallback(() => {
-	setMessage("Welcome to my Portfolio!");
-}, []);
-
-useEffect(() => {
-	const timer = setTimeout(() => {
-	changeMessage();
-	}, 3000);
-	return () => clearTimeout(timer);
-}, [changeMessage]);
+const App = () => {
 
 return (
-	<Fragment>
-		<div className="App">
-			<p>{message}</p>
-		</div>
-	</Fragment>
-)};
+		<QueryClientProvider client={queryClient}>
+		<CookiesProvider>
+			<BrowserRouter>
+				<Fragment>
+					{/* <div className="App">
+					<p>{message}</p>
+					</div> */}
+					<Router />
+				</Fragment>
+			</BrowserRouter>
+		</CookiesProvider>
+		<ReactQueryDevtools initialIsOpen={true} />
+		</QueryClientProvider>
+	);
+};
 
 export default React.memo(App);
