@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useRef } from "react";
+import React, {Fragment, useEffect, useRef} from "react";
 import Typed from "typed.js";
 
 const PortFolio = () => {
@@ -12,18 +12,27 @@ const PortFolio = () => {
 			backDelay: 3000,
 			loop: true,
 		}
-		
+
 		const typed = new Typed(typedStr.current, options);
 
 		return ():void => {
 			typed.destroy();
 		};
 	}, []);
+	//
+	// const sendMail = useCallback(():void => {
+	// 	const recipient = "wmk1024@gmail.com"; // 수신자 이메일
+	// 	const subject = "Hello"; // 제목
+	// 	const body = `Hi there,\n\nThis is a test email sent from your website.\n\nBest regards,\nAyeong`; // 본문
+	// 	const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+	// 		recipient
+	// 	)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+	// 	window.open(gmailLink, "_blank");
+	// }, []);
 
 	return (
 		<Fragment>
 			<div style={{ display: `flex`, justifyContent: `center`, alignItems: `center`, fontSize: `52px`, marginTop: `48px` }}>
-				{/* {str} */}
 				<span ref={typedStr} />
 			</div>
 
@@ -70,22 +79,48 @@ const PortFolio = () => {
 				<h2 style={{ borderBottom: `1px solid #d8dee4`, color: `#282d33` }}>🧑‍💻 Contact me</h2>
 				<br />
 				<div style={{ display:`flex`, flexFlow:`column`, gap:`4px`, alignItems:`center` }}>
-					<div style={{ display:`flex`, flexFlow:`row`, alignItems: `center`, gap:`2px`}}>
-						<img src={`https://img.shields.io/badge/Velog-20C997?style=for-the-badge&logo=Velog&logoColor=white`} alt={`Velog`} />
-						<img src={`https://img.shields.io/badge/Naver-03C75A?style=for-the-badge&logo=Naver&logoColor=white`} alt={`Naver`} />
-						<img src={`https://img.shields.io/badge/Tistory-000000?style=for-the-badge&logo=Tistory&logoColor=white`} alt={`Tistory`} />
-						<img src={`https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=Notion&logoColor=white`} alt={`Notion`} />
-						<img src={`https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=Gmail&logoColor=white`} alt={`Gmail`} />
+					<div style={{display: `flex`, flexFlow: `row`, alignItems: `center`, gap: `2px`}}>
+						<span><img
+							src={`https://img.shields.io/badge/Velog-20C997?style=for-the-badge&logo=Velog&logoColor=white`}
+							alt={`Velog`}/></span>
+						<span><img
+							src={`https://img.shields.io/badge/Naver-03C75A?style=for-the-badge&logo=Naver&logoColor=white`}
+							alt={`Naver`}/></span>
+						<span><img
+							src={`https://img.shields.io/badge/Tistory-000000?style=for-the-badge&logo=Tistory&logoColor=white`}
+							alt={`Tistory`}/></span>
+						<span><img
+							src={`https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=Notion&logoColor=white`}
+							alt={`Notion`}/></span>
+						<span
+							onClick={() => {
+								const recipient = "wmk1024@gmail.com"; // 수신자 이메일
+								const subject = "Hello"; // 제목
+								const body = `Hi there,\n\nThis is a test email sent from your website.\n\nBest regards,\n`; // 본문
+								const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+									recipient
+								)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+								window.open(gmailLink, "_blank");
+							}}
+							style={{cursor: "pointer"}}
+						>
+						<img
+							src={`https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=Gmail&logoColor=white`}
+							alt={`Gmail`}
+						/>
+  						</span>
 					</div>
-					<br />
+					<br/>
 				</div>
 			</div>
 
-			<div style={{ textAlign: `left` }}>
-				<h2 style={{ borderBottom: `1px solid #d8dee4`, color: `#282d33` }}>🏅 Stats</h2>
-				<div style={{ display:`flex`, flexFlow:`column`, gap:`4px`, alignItems:`center` }}>
+			<div style={{textAlign: `left`}}>
+				<h2 style={{borderBottom: `1px solid #d8dee4`, color: `#282d33`}}>🏅 Stats</h2>
+				<div style={{display: `flex`, flexFlow: `column`, gap: `4px`, alignItems: `center`}}>
 					<div style={{alignItems: `center`}}>
-						<img src={`https://github-readme-stats.vercel.app/api?username=ayeoong&title_color=000000&text_color=000000`} alt={`GitHub stats`} />
+						<img
+							src={`https://github-readme-stats.vercel.app/api?username=ayeoong&title_color=000000&text_color=000000`}
+							alt={`GitHub stats`}/>
 					</div>
 				</div>
 			</div>
